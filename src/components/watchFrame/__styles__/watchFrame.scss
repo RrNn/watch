@@ -1,0 +1,119 @@
+.watch-wrapper {
+  border: 2px solid black;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 15rem;
+  .watch-number {
+    font-weight: bold;
+    font-size: 2rem;
+    border: 1px solid transparent;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    &.n-1 {
+      position: relative;
+      left: 20.5rem;
+      top: 0rem;
+    }
+
+    &.n-2 {
+      position: relative;
+      left: 25.5rem;
+      top: 3.5rem;
+    }
+
+    &.n-3 {
+      position: relative;
+      left: 27rem;
+      top: 8rem;
+    }
+    &.n-4 {
+      position: relative;
+      left: 25rem;
+      top: 11.5rem;
+    }
+
+    &.n-5 {
+      position: relative;
+      left: 20.5rem;
+      top: 13.5rem;
+    }
+
+    &.n-6 {
+      position: relative;
+      left: 13.5rem;
+      top: 13.5rem;
+    }
+    &.n-7 {
+      position: relative;
+      left: 6.5rem;
+      top: 9rem;
+    }
+
+    &.n-8 {
+      position: relative;
+      left: 3rem;
+      top: 3rem;
+    }
+
+    &.n-9 {
+      position: relative;
+      left: 1rem;
+      top: -5rem;
+    }
+    &.n-10 {
+      position: relative;
+      left: 2.5rem;
+      top: -13.75rem;
+    }
+
+    &.n-11 {
+      position: relative;
+      left: 6.5rem;
+      top: -21.5rem;
+    }
+
+    &.n-12 {
+      position: relative;
+      left: 13.5rem;
+      top: -25.5rem;
+    }
+  }
+  .center {
+    position: relative;
+    top: 15.5rem;
+    left: 14rem;
+    border: 1px solid #000;
+    background-color: #000;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+  .tick {
+    position: relative;
+    top: 14.5rem;
+    display: flex;
+    justify-content: flex-start;
+    &.hour {
+      div {
+        width: 50%;
+        border: 2px solid black;
+        clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%);
+      }
+    }
+    &.minute {
+      div {
+        width: 50%;
+        border: 2px solid black;
+        clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%);
+      }
+    }
+    &.second {
+      div {
+        width: 50%;
+        border: 2px solid black;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 30% 100%);
+      }
+    }
+  }
+}

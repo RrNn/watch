@@ -16,7 +16,11 @@ const SecondTick = () => {
   };
 
   return (
-    <div id="second" className="tick second" style={{ transform: `rotate(${90 + seconds}deg)` }}>
+    <div
+      id="second"
+      className="tick second"
+      style={{ transform: `rotate(${90 + seconds}deg)` }}
+    >
       <div />
     </div>
   );

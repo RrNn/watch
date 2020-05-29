@@ -6,7 +6,9 @@ const HourTick = () => {
       case 'TICK_ELAPSED':
         return { minutes: state.minutes + action.minutes };
       default:
-        throw new Error('Error...The action type is undefined, not sure what to do!');
+        throw new Error(
+          'Error...The action type is undefined, not sure what to do!'
+        );
     }
   };
 
@@ -17,7 +19,7 @@ const HourTick = () => {
     /* when this mounts, get the initial degree in which to rotate,
      ie the already elapsed minutes in the hour startAt.getMinutes() * 0.1 */
 
-    // dispatch({ type: 'TICK_ELAPSED', minutes: startAt.getHours() });
+    dispatch({ type: 'TICK_ELAPSED', minutes: startAt.getHours() });
     console.log('hours____', startAt.getHours());
     start();
   }, []);
@@ -27,12 +29,16 @@ const HourTick = () => {
   const start = () => {
     console.log('hour_lorem');
     setInterval(() => {
-      // dispatch({ type: 'TICK_ELAPSED', minutes: 6 / 60 });
+      dispatch({ type: 'TICK_ELAPSED', minutes: 6 / 60 });
     }, 1000);
   };
 
   return (
-    <div id="hour" className="tick hour" style={{ transform: `rotate(${90 + state.minutes}deg)` }}>
+    <div
+      id="hour"
+      className="tick hour"
+      style={{ transform: `rotate(${90 + state.minutes}deg)` }}
+    >
       <div />
     </div>
   );

@@ -4,7 +4,7 @@ const SecondTick = () => {
   const [seconds, setSeconds] = useState(null);
 
   useEffect(() => {
-    console.log('second_lorem');
+
     start();
   }, []);
 

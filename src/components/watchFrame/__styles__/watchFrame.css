@@ -69,7 +69,7 @@
     height: 2rem; }
   .watch-wrapper .tick {
     position: relative;
-    top: 14.5rem;
+    top: 14rem;
     display: flex;
     justify-content: flex-start; }
     .watch-wrapper .tick.hour div {

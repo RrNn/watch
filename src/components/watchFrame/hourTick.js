@@ -17,17 +17,15 @@ const HourTick = () => {
   useEffect(() => {
     const startAt = new Date();
     /* when this mounts, get the initial degree in which to rotate,
-     ie the already elapsed minutes in the hour startAt.getMinutes() * 0.1 */
-
-    dispatch({ type: 'TICK_ELAPSED', minutes: startAt.getHours() });
-    console.log('hours____', startAt.getHours());
+     ie the already elapsed hours and minutes */
+    const tiltAngle = startAt.getHours() * 30 + (startAt.getMinutes() * 6)/30;
+    dispatch({ type: 'TICK_ELAPSED', minutes: tiltAngle });
     start();
   }, []);
 
-  /* after getting the elapsed minutes and rotating,
-    start to rotate the minute hand according to the elapsed seconds */
+  /* after getting the elapsed hours & minutes and doing the inital rotaion,
+    start to rotate the hour hand according to the elapsed seconds */
   const start = () => {
-    console.log('hour_lorem');
     setInterval(() => {
       dispatch({ type: 'TICK_ELAPSED', minutes: 6 / 60 });
     }, 1000);
